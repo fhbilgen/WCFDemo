@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DemoService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WCFDemoSvc" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDemoService_GetHostName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHostName" />
+  </wsdl:message>
+  <wsdl:message name="IDemoService_GetHostName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHostNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemoService_Echo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Echo" />
+  </wsdl:message>
+  <wsdl:message name="IDemoService_Echo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EchoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemoService_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="IDemoService_Ping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemoService_GetHostTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHostTime" />
+  </wsdl:message>
+  <wsdl:message name="IDemoService_GetHostTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHostTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemoService_CauseException_InputMessage">
+    <wsdl:part name="parameters" element="tns:CauseException" />
+  </wsdl:message>
+  <wsdl:message name="IDemoService_CauseException_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CauseExceptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemoService_GuessGender_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuessGender" />
+  </wsdl:message>
+  <wsdl:message name="IDemoService_GuessGender_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuessGenderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemoService_GetPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerson" />
+  </wsdl:message>
+  <wsdl:message name="IDemoService_GetPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemoService_Delay_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delay" />
+  </wsdl:message>
+  <wsdl:message name="IDemoService_Delay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelayResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDemoService">
+    <wsdl:operation name="GetHostName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemoService/GetHostName" message="tns:IDemoService_GetHostName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemoService/GetHostNameResponse" message="tns:IDemoService_GetHostName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Echo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemoService/Echo" message="tns:IDemoService_Echo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemoService/EchoResponse" message="tns:IDemoService_Echo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemoService/Ping" message="tns:IDemoService_Ping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemoService/PingResponse" message="tns:IDemoService_Ping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHostTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemoService/GetHostTime" message="tns:IDemoService_GetHostTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemoService/GetHostTimeResponse" message="tns:IDemoService_GetHostTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CauseException">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemoService/CauseException" message="tns:IDemoService_CauseException_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemoService/CauseExceptionResponse" message="tns:IDemoService_CauseException_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuessGender">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemoService/GuessGender" message="tns:IDemoService_GuessGender_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemoService/GuessGenderResponse" message="tns:IDemoService_GuessGender_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemoService/GetPerson" message="tns:IDemoService_GetPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemoService/GetPersonResponse" message="tns:IDemoService_GetPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemoService/Delay" message="tns:IDemoService_Delay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemoService/DelayResponse" message="tns:IDemoService_Delay_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDemoService" type="tns:IDemoService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetHostName">
+      <soap:operation soapAction="http://tempuri.org/IDemoService/GetHostName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Echo">
+      <soap:operation soapAction="http://tempuri.org/IDemoService/Echo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://tempuri.org/IDemoService/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHostTime">
+      <soap:operation soapAction="http://tempuri.org/IDemoService/GetHostTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CauseException">
+      <soap:operation soapAction="http://tempuri.org/IDemoService/CauseException" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuessGender">
+      <soap:operation soapAction="http://tempuri.org/IDemoService/GuessGender" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerson">
+      <soap:operation soapAction="http://tempuri.org/IDemoService/GetPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delay">
+      <soap:operation soapAction="http://tempuri.org/IDemoService/Delay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DemoService">
+    <wsdl:port name="BasicHttpBinding_IDemoService" binding="tns:BasicHttpBinding_IDemoService">
+      <soap:address location="http://localhost:10001/DemoSvc/DemoService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

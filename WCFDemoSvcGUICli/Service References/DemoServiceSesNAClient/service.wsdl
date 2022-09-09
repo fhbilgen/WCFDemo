@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DemoServiceSesNA" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDemoSvcSesNA_GetHostName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHostName" />
+  </wsdl:message>
+  <wsdl:message name="IDemoSvcSesNA_GetHostName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHostNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemoSvcSesNA_Echo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Echo" />
+  </wsdl:message>
+  <wsdl:message name="IDemoSvcSesNA_Echo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EchoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemoSvcSesNA_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="IDemoSvcSesNA_Ping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemoSvcSesNA_GetHostTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHostTime" />
+  </wsdl:message>
+  <wsdl:message name="IDemoSvcSesNA_GetHostTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHostTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemoSvcSesNA_IncrementCounter_InputMessage">
+    <wsdl:part name="parameters" element="tns:IncrementCounter" />
+  </wsdl:message>
+  <wsdl:message name="IDemoSvcSesNA_IncrementCounter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IncrementCounterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemoSvcSesNA_GetCounter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCounter" />
+  </wsdl:message>
+  <wsdl:message name="IDemoSvcSesNA_GetCounter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCounterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemoSvcSesNA_DecrementCounter_InputMessage">
+    <wsdl:part name="parameters" element="tns:DecrementCounter" />
+  </wsdl:message>
+  <wsdl:message name="IDemoSvcSesNA_DecrementCounter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DecrementCounterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemoSvcSesNA_Delay_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delay" />
+  </wsdl:message>
+  <wsdl:message name="IDemoSvcSesNA_Delay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelayResponse" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="false" name="IDemoSvcSesNA">
+    <wsdl:operation name="GetHostName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemoSvcSesNA/GetHostName" message="tns:IDemoSvcSesNA_GetHostName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemoSvcSesNA/GetHostNameResponse" message="tns:IDemoSvcSesNA_GetHostName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Echo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemoSvcSesNA/Echo" message="tns:IDemoSvcSesNA_Echo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemoSvcSesNA/EchoResponse" message="tns:IDemoSvcSesNA_Echo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemoSvcSesNA/Ping" message="tns:IDemoSvcSesNA_Ping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemoSvcSesNA/PingResponse" message="tns:IDemoSvcSesNA_Ping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHostTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemoSvcSesNA/GetHostTime" message="tns:IDemoSvcSesNA_GetHostTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemoSvcSesNA/GetHostTimeResponse" message="tns:IDemoSvcSesNA_GetHostTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IncrementCounter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemoSvcSesNA/IncrementCounter" message="tns:IDemoSvcSesNA_IncrementCounter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemoSvcSesNA/IncrementCounterResponse" message="tns:IDemoSvcSesNA_IncrementCounter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCounter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemoSvcSesNA/GetCounter" message="tns:IDemoSvcSesNA_GetCounter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemoSvcSesNA/GetCounterResponse" message="tns:IDemoSvcSesNA_GetCounter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DecrementCounter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemoSvcSesNA/DecrementCounter" message="tns:IDemoSvcSesNA_DecrementCounter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemoSvcSesNA/DecrementCounterResponse" message="tns:IDemoSvcSesNA_DecrementCounter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemoSvcSesNA/Delay" message="tns:IDemoSvcSesNA_Delay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemoSvcSesNA/DelayResponse" message="tns:IDemoSvcSesNA_Delay_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDemoSvcSesNA" type="tns:IDemoSvcSesNA">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetHostName">
+      <soap:operation soapAction="http://tempuri.org/IDemoSvcSesNA/GetHostName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Echo">
+      <soap:operation soapAction="http://tempuri.org/IDemoSvcSesNA/Echo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://tempuri.org/IDemoSvcSesNA/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHostTime">
+      <soap:operation soapAction="http://tempuri.org/IDemoSvcSesNA/GetHostTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncrementCounter">
+      <soap:operation soapAction="http://tempuri.org/IDemoSvcSesNA/IncrementCounter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCounter">
+      <soap:operation soapAction="http://tempuri.org/IDemoSvcSesNA/GetCounter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecrementCounter">
+      <soap:operation soapAction="http://tempuri.org/IDemoSvcSesNA/DecrementCounter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delay">
+      <soap:operation soapAction="http://tempuri.org/IDemoSvcSesNA/Delay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DemoServiceSesNA">
+    <wsdl:port name="BasicHttpBinding_IDemoSvcSesNA" binding="tns:BasicHttpBinding_IDemoSvcSesNA">
+      <soap:address location="http://localhost:10003/DemoSvc/DemoServiceSesNA" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
